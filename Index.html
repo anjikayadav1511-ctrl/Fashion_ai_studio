@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GlowTone AI Premium</title>
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.10.0/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/blazeface"></script>
+</head>
+
+<body>
+
+<button class="toggle-mode" onclick="toggleMode()"> Toggle Mode</button>
+
+<div class="main-container">
+
+<h1> GlowTone AI Premium </h1>
+<p>AI Fashion & Beauty Advisor</p>
+
+<div class="card">
+
+<p class="privacy"> Your image stays on your device.</p>
+
+<input type="file" id="upload" accept="image/*">
+
+<button onclick="requestCameraPermission()">📷 Allow Camera</button>
+<video id="camera" autoplay playsinline></video>
+<button onclick="capturePhoto()">Capture</button>
+<button onclick="stopCamera()">Stop</button>
+
+<canvas id="canvas"></canvas>
+
+</div>
+
+<div id="result" class="result-card"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
